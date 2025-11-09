@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея с Меню</title>
+    <link rel="stylesheet" href="./about-us.css">
+    
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="index.html"><img src="./images/Logo.svg" alt="Логотип"></a>
+            <ul>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="#">Download Intructions</a></li>
+                <li><a href="#">App Settings</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <button class="download">Download</button>
+        </div>
+    </nav>
+
+    <div class="slider-wrapper">
+        <button id="prevBtn" class="nav-btn">&lt;</button>
+        <div class="slider-viewport">
+            <div class="slider-track">
+                <div class="slide"><img src="./images/calendar1.png"  alt="Описание фото 1"></div>
+                <div class="slide"><img src="./images/students_preview.png" class="img" alt="Описание фото 2"></div>
+                <div class="slide"><img src="./images/calendarpreview.png" alt="Описание фото 3"></div>
+                <div class="slide"><img src="./images/teachers_preview.png" alt="Описание фото 4"></div>
+            </div>
+        </div>
+        <button id="nextBtn" class="nav-btn">&gt;</button>
+    </div>
+
+    <script src="./about-us.js"></script>
+
+</body>
+</html>

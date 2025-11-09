@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contacts.css">
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <a href=""><img src="./images/Logo.svg" alt="Logo"></a>
+        <ul>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="">Download Intructions</a></li>
+            <li><a href="">App Settings</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+        <button class="download">Download</button>
+        </div>
+    </nav>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f6ff;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+  }
+
+  form {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 320px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 80px;
+  }
+
+  button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+
+<div class="content">
+  <form id="contactForm">
+    <h2>Contact us</h2>
+
+    <label for="name">Enter your name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Enter your email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="message">Enter message</label>
+    <textarea id="message" placeholder="Enter message" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if(!name || !email || !message){
+    alert("Пожалуйста, заполните все поля!");
+    return;
+  }
+
+  const toEmail = "youremail@example.com";
+  const subject = encodeURIComponent("Сообщение с сайта");
+  const body = encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`);
+
+  window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+});
+</script
+
+</body>
+</html>    
